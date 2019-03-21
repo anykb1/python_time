@@ -11,6 +11,9 @@ else:
     print("no")
 '''
 
+'''
+测试get_all_payday的功能
 all_payday = time_sy.get_all_payday("19980817",12)
 for i in all_payday:
     print i
+'''

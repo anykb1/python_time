@@ -28,3 +28,16 @@ def get_all_payday(first, stage):  # 输入第一个还款日与期数，输出�
         first_time = time.strptime(next_time, '%Y%m%d')
         all_payday.append(next_time)
     return all_payday
+
+
+def getpastday(time1, time2):
+    """
+    :param time1:
+    :param time2:
+    :return: 返回两个以"YYYYMMDD"为格式的日期之间的天数差，返回值的类型为数值
+    """
+    time1 = time.strptime("19980817","%Y%m%d")
+    time2 = time.strptime("19980818","%Y%m%d")
+    time3 = abs(time.mktime(time2) - time.mktime(time1))
+    day = time3/(60*60*24)
+    return day
